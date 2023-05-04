@@ -1,0 +1,218 @@
+.hamburger-container{
+  display: none;
+}
+
+.navsearch_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4f3f84;
+    color: #FF662A;
+    border-radius: 0 20px 0 0;
+    height: 20%;
+    padding: 0 20px;
+  }
+  
+  
+  
+  .airdata_container{
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+  }
+  
+  select {
+      height: 30px;
+      width: 200px;
+      background-color: transparent;
+      border: 1px solid #FF662A;
+      color: #FF662A;
+      outline: none;
+      border-radius: 10px;
+      padding: 0 10px;
+    
+      /* Remove the default arrow icon */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    
+      /* Add a custom arrow icon */
+      background-image: url("../images/keyboard-arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 20px;
+      color: #FF662A;
+      
+    }
+  
+    select option {
+      background-color: #FF662A;
+      color: #4f3f84;
+      padding: 5px;
+    }
+  
+    #end_date_picker,#begin_date_picker {
+      background-color: transparent;
+      outline: none;
+      border: 1px solid #FF662A;
+      height: 30px;
+      width: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+      color:#FF662A;
+    }
+  
+    .fetch_container {
+      background-color: #FF662A;
+      color: #4f3f84;
+      border-radius: 10px;
+      padding: 5px 15px ;
+      cursor: pointer;
+  }
+  
+  .table_container{
+    background-color: #E0E2D2;
+    border-radius: 10px;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px 20px;
+  }
+
+  .loading{
+    display: flex;
+    justify-content: center;
+    color: #FF662A;
+    padding: 5px 0;
+  }
+
+  .table_search{
+    padding: 10px 0;
+  }
+
+ 
+
+
+  
+
+  /*  Responsiveness  */
+
+  @media screen and (max-width: 1030px) {
+    select {
+      width: 150px;
+    }
+
+    #end_date_picker,#begin_date_picker {
+      width: 150px;
+
+    }
+
+  }
+
+
+  @media screen and (max-width: 800px) {
+    select {
+      width: 130px;
+    }
+
+    #end_date_picker,#begin_date_picker {
+      width: 130px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .navsearch_container{
+      border-radius: 0;
+      padding: 15px;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(2, 1fr);
+      height: 35%;
+      gap: 10px;
+
+    }
+
+    #end_date_picker,#begin_date_picker ,select{
+      width: 170px;
+    }
+
+    
+    .fetch_container {
+      width: 100px;
+      margin-left: 50px;
+    }
+
+    .table_container{
+      background-color: #E0E2D2;
+      border-radius: 10px;
+      height: 100%;
+      overflow: scroll;
+      padding: 10px 20px;
+    }
+
+    .table_container{
+      height: 100%;
+      padding: 0  0  0 5px;
+      width: 100%;
+      
+    }
+
+    .hamburger-container{
+      position: relative;
+      background-color: #E0E2D2;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px;
+      
+    }
+
+    .logp_mobile{
+      color:#4f3f84;
+    }
+    
+    .hamburger-icon{
+      width: 25px;
+      height: 25px;
+      color: #FF662A;
+    }
+    
+    .navlink_dropdown{
+      display: flex;
+      background-color: #E0E2D2;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      gap: 30px;
+      position: absolute;
+      z-index: 100;
+      padding: 5px 20px 0 20px;
+      left: -100%;
+      transition: all 1s ease-in-out;
+    }
+
+    .navlink_dropdown a{
+      text-decoration: none;
+      color: #FF662A;
+      font-size: 20px;
+    }
+
+    .navlink_dropdown a.active {
+      background-color: #4f3f84;
+      color: #FF662A;
+      border-radius: 20px; 
+      padding: 10px 20px ;
+  }
+  
+    .showNavDropdown{
+      left: 0;
+    }
+
+    .mobile_sidebar_logo{
+      color: #4f3f84;
+      padding: 10px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+  }
